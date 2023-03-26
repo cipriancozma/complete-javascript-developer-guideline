@@ -55,3 +55,96 @@ To log the result into the console window of the web browser, you use the consol
 Now you should see 30 in the console window.
 
 JS provides you with the condition statements such as if-else and switch statements. For instance:
+
+    let a = 20;
+    b = 30;
+
+    function divide(a, b) {
+        if(b == 0) {
+            throw new Exception('Division by zero');
+        }
+        return a / b;
+    }
+
+In the divide() function, we checked whether the de-numerator (b) is zero. If yes, we threw an exception. Otherwise we returned the result of a/ b.
+
+To declare an array, you use the following syntax:
+
+    let items = [];
+
+To declare an array with some initial elements, you specify the elements in the square brackets:
+
+    let items = [1, 2, 3];
+
+You can access the number of elements in the items array through its length property:
+
+    console.log(items.length); // 3
+
+To iterate over the elements of the items array, you use the for loop statement as follows:
+
+    for(let i = 0; i < items.length; i++) {
+        console.log(items[i])
+    }
+
+Or use the for...of loop in ES6:
+
+    for(let item of items) {
+        console.log(item);
+    }
+
+To declare a "class" in JS, you use the function keyword:
+
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+By convention, a class name should be a noun in a UpperCamelCase with the first letter of every word capitalized.
+
+The following example declares a method of the Person "class":
+
+    Person.prototype.getFullName = function() {
+        return this.firstName + ' ' + this.lastName;
+    }
+
+To create an instance of the Person "class", you use the new keyword:
+
+    let john = new Person('John', 'Doe');
+
+To call the method you can use:
+
+    let fullName = john.getFullName();
+
+In ES6 you can use the class keyword to declare a class in JS:
+
+    class Person {
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        getFullName() {
+            return this.firstName + ' ' + this.lastName;
+        }
+    }
+
+We have just introduced you to some features of JS.
+Each feature will be learned in detail in the next chapters.
+
+Have fun learning JS!
+
+# 02. JavaScript Code Editors
+
+The popular JS code editors:
+
+- Visual Studio Code
+- Atom
+- Notepad++
+- Vim
+- GNU Emacs
+
+# 03. Web Development Tools
+
+-> Chrome, Firefox, Safari, Edge
+
+# 04. JavaScript Hello World Example
