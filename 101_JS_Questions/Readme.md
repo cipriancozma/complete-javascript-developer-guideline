@@ -3,32 +3,33 @@
 i. Object Constructor
 Currently this approach is not recommended.
 
-let object = new Object();
+    let object = new Object();
 
 ii. Object create method
 
-let object = Object.create(null);
+    let object = Object.create(null);
 
 iii. Object literal syntax
 
-let object = {};
+    let object = {};
 
 iv. Function constructor
 
-function Person(name) {
-let object = {};
+    function Person(name) {
+    let object = {};
 
     object.name = name;
     object.age = 21;
     return object;
 
-}
+    }
 
-let newObj = new Person("Ciprian");
+    let newObj = new Person("Ciprian");
 
 v. Function constructor with prototype
-function Person() {}
-Person.prototype.name = 'Ciprian';
-let objectObj = new Person();
+
+    function Person() {}
+    Person.prototype.name = 'Ciprian';
+    let objectObj = new Person();
 
 vi. ES6 Class syntax
