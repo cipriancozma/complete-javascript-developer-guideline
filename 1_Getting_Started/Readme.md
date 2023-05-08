@@ -148,3 +148,19 @@ The popular JS code editors:
 -> Chrome, Firefox, Safari, Edge
 
 # 04. JavaScript Hello World Example
+
+To insert JS into an HTML page you can use the script element in an HTML page:
+
+- Embed JS code directly into the HTML page
+- reference an external JS code file
+
+Preferable is to introduce JS into HTML by referencing to it.
+
+<script src='./app.js'></script>
+
+To change how the JS code load and execute you can use one of two attributes of the script element: async and defer.
+
+The async attribute instructs the web browser to fetch the JS file in parallel and then parse and execute as soon as the JS file is available.
+
+The defer attribute requests the web browser to execute the script file after the document is parsed.
+Even if we place the script tag into the head section, the script will wait for the browser to receive the closing tag html to start executing.
