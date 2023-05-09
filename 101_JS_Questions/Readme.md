@@ -121,3 +121,24 @@ To convert a native object to a string
     let arrayInt3 = arrayInt.slice(4); // returns [5];
 
 # 6. What is the purpose of the array splice method?
+
+    The splice method returns either the added/removed items from an array.
+
+    let arrayInt1 = [1, 2, 3, 4, 5];
+    let arrayInt2 = [1, 2, 3, 4, 5];
+    let arrayInt3 = [1, 2, 3, 4, 5];
+
+    let arr1 = arrayInt1.splice(0,2); // [1, 2]
+    let arr2 = arrayInt2.splice(3); // [4, 5]
+    let arr3 = arrayInt3.splice(3, 1, "a", "b", "c"); // returns [4];
+
+    Splice method modifies the original array and returns the deleted array.
+
+# 7. What is the difference between slice and splice?
+
+    Slice ----------------------------------- Splice
+    Doesn't modify the original array         Modifies the original array
+    Returns the subset of orignal array       Returns the deleted elements as array
+    Used to pick the elements from array      Used to insert/delete elements to/from array
+
+# 8. How do you compare Object and Map?
