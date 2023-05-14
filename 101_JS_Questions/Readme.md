@@ -142,3 +142,60 @@ To convert a native object to a string
     Used to pick the elements from array      Used to insert/delete elements to/from array
 
 # 8. How do you compare Object and Map?
+
+    Objects are similar to Maps in that both let you set keys to values, retrieve those values, delete keys and detect whether something is stored at a key.
+
+    Due to this reason, Objects have been used as Maps historically. But there are important differences that make using a Map preferable in certain cases.
+
+    i. The keys of an Object are Strings and Symbols, whereas they can be any value for Map, including functions, objects and any primitive.
+    ii. The keys in Map are ordered while keys added to Object are not. Thus, when iterating over it, a Map object returns keys in order of insertion.
+    iii. You can get the size of a Map easily with the size property, while the number of properties in an Object must be determined manually
+    iv. A Map is an iterable and can thus be directly iterated, whereas iterating over an Object requires obtaining its keys in some way and iterating over them
+    v. A Map may perform better in scenarios involving frequent addition and removal of key pairs.
+
+# 9. What is the difference between == and === operators?
+
+    The === strict operators take type of variable in consideration, while == non-strict operators make type correction/conversion based upon values of variables.
+
+    0 == false // true
+    0 === false // false
+    1 == "1" // true
+    1 === "1" // false
+    null == undefined // true
+    null === undefined // false
+    [] == [] or [] === [] or {} == {} or {} === {} // false, refer different objects in memory
+
+# 10. What are lambda or arrow functions?
+
+    An arrow function is a shorter syntax for a function expression and does not have its own this, arguments or super.
+
+# 11. What is a first class function?
+
+    In JavaScript, functions are first class objects. First class functions means when functions in that language are treated like any other variable.
+
+    For instance, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+    const handler = () => console.log('This is a click handler function);
+    document.addEventListener('click', handler);
+
+# 12. What is a first order function?
+
+    First order function is a function that doesn't accept another function as an argument and doesn't return a function as its return value.
+
+    const firstOrder = () => console.log("I am a first order function");
+
+# 13. What is a higher order function?
+
+    Higher order function is a function that accepts another function as an argument or returns a function as a return value or both
+
+    const firstOrderFunc = () => console.log("First Order Function");
+    const higherOrder = firstOrderFunc => firstOrderFunc();
+    higherOrder(firstOrderFunc);
+
+# 14. What is a unary function?
+
+    Unary function is a function that accepts exactly one argument. It stands for a single argument accepted by a function.
+
+    const unaryFunction = a => console.log(a + 10);
+
+# 15. What is the currying function?
